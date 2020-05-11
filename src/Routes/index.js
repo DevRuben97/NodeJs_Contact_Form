@@ -1,11 +1,11 @@
 import HomeRoutes from './Home';
-import RegisterRoutes from './Register';
+import ContactRoutes from './Contact';
 
 
-const Routes=[
-    HomeRoutes,
-    RegisterRoutes
-]
+const Routes = app=> {
+    app.use(HomeRoutes);
+    app.use(ContactRoutes);
+}
 
 
 export default Routes;

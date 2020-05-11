@@ -18,9 +18,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 //Set the app routes:
-Routes.forEach((route)=> {
-    app.use(route);
-})
+Routes(app);
 
 //Template Engine Config:
 app.set('views', path.join(__dirname,'Views'));
