@@ -4,7 +4,17 @@ html
 main
     .container(style="margin-top: 100px")
         h1.text-center Contacte al Desarrollador
-        form(action="", method="post")
-            .form-group
-                label Nombre Completo
-                input.form-control(type="text", name="")
+        form(action="/contact", method="post")
+            .row
+                .col-sm-5
+                    label Nombre Completo
+                    input.form-control#name(type="text", name="name")
+                .col-sm-5
+                    label Correo Electronico
+                    input.form-control#email(type="text", name="email")
+            .row
+                .col
+                    label Mensaje
+                    textarea.form-control#message(rows="10", name="message")
+                    br
+                    input.btn.btn-primary.btn-lg(type="submit" value="Enviar Mensaje")

@@ -1,0 +1,21 @@
+html
+    include includes/Head.pug
+
+    .container(style="margin-top: 100px")
+        h1.text-center Datos Enviados correctamente
+
+        .row
+            .col-sm-2
+                label 
+                   strong Nombre Completo: 
+                label!= name
+            .col-sm-2
+                label 
+                   strong Correo Electronico:
+                label!= email
+        .row
+            .col-md-5
+                label
+                    strong  Mensaje:
+                br
+                label!= message
